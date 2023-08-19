@@ -3,6 +3,7 @@ function getElementValue(elementId) {
     if (getElement.tagName == 'INPUT') {
         let getInputValue = getElement.value;
         getInputValue = parseFloat(getInputValue);
+        getElement.value = '';
         return getInputValue;
     }
     else {

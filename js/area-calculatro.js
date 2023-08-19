@@ -19,3 +19,25 @@ function ParallelogramArea() {
     const ParallelogramArea = .5 * ParallelogramHeight * ParallelogramBase;
     setArea('parea', ParallelogramArea);
 }
+
+function RhombusArea() {
+    const rhombusDiagon1 = getElementValue('input-rdiagon1')
+    const rhombusDiagon2 = getElementValue('input-rdiagon2')
+    const rhombusArea = .5 * rhombusDiagon1 * rhombusDiagon2;
+    setArea('rharea', rhombusArea);
+}
+
+
+function pentagonArea() {
+    const pentagonSide = getElementValue('input-pside');
+    const pentagonApothem = getElementValue('input-papothem');
+    const pentagonArea = 0.5 * pentagonSide * pentagonApothem;
+    setArea('pentagon-area', pentagonArea);
+}
+function ellipseArea() {
+    const ellipseA = getElementValue('input-aside');
+    const ellipseB = getElementValue('input-bside');
+    const ellipseArea = Math.PI * ellipseA * ellipseB;
+    const fixedArea = ellipseArea.toFixed(2);
+    setArea('earea', fixedArea);
+}

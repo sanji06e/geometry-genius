@@ -54,7 +54,7 @@
                     <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="text-xl font-semibold text-center">Rectangle</h2>
-                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>Area(A) = w x h</p>
                       <p>
                         <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rwidth" placeholder="w">
                         <span class="mx-2">cm</span>
@@ -72,7 +72,7 @@
                     <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="text-xl font-semibold text-center">Parallelogram</h2>
-                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>Area(A) = b x h</p>
                       <p>
                         <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pbase" placeholder="b">
                         <span class="mx-2">cm</span>
@@ -90,52 +90,52 @@
                     <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
                       <h2 class="text-xl font-semibold text-center">Rhombus</h2>
-                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>Area(A) = 0.5 x d1 x d2</p>
                       <p>
                         <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rdiagon1" placeholder="d1">
                         <span class="mx-2">cm</span>
                         <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rdiagon2" placeholder="d2">
                         <span class="mx-2">cm</span>
                       </p>
-                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="tarea">0</span> cm<sup>2</sup></p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="rharea">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-center py-5">
-                        <button onclick="triangleArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                        <button onclick="RhombusArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
                       </div>
                     </div>
                   </div>
                 <!-- fifth card -->
                 <div class="card w-96 bg-base-100 border pt-10">
-                    <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                    <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
-                      <h2 class="text-xl font-semibold text-center">Rectangle</h2>
-                      <p>Area(A) = 0.5 x b x h</p>
+                      <h2 class="text-xl font-semibold text-center">Pentagon</h2>
+                      <p>Area(A) = 0.5 x s x a</p>
                       <p>
-                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rwidth" placeholder="w">
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pside" placeholder="s">
                         <span class="mx-2">cm</span>
-                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rheight" placeholder="h">
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-papothem" placeholder="a">
                         <span class="mx-2">cm</span>
                       </p>
-                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="rarea">0</span> cm<sup>2</sup></p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="pentagon-area">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-center py-5">
-                        <button onclick="rectangleArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                        <button onclick="pentagonArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
                       </div>
                     </div>
                 </div>
                 <!-- sixth card -->
                 <div class="card w-96 bg-base-100 border pt-10">
-                    <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
                     <div class="card-body text-center">
-                      <h2 class="text-xl font-semibold text-center">Parallelogram</h2>
-                      <p>Area(A) = 0.5 x b x h</p>
+                      <h2 class="text-xl font-semibold text-center">Ellipse</h2>
+                      <p>Area(A) = πab</p>
                       <p>
-                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pbase" placeholder="b">
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-aside" placeholder="a">
                         <span class="mx-2">cm</span>
-                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pheight" placeholder="h">
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-bside" placeholder="b">
                         <span class="mx-2">cm</span>
                       </p>
-                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="parea">0</span> cm<sup>2</sup></p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="earea">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-center py-5">
-                        <button onclick="ParallelogramArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                        <button onclick="ellipseArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
                       </div>
                     </div>
                 </div>
