@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body{font-family: 'Inter', sans-serif;}
+    </style>
+</head>
+<body>
+    <header>
+        <!-- header -->
+        <div class="flex justify-between bg-sky-100 m-10 p-6 rounded-lg">
+            <!-- logo -->
+            <div>
+                <h1 class="text-4xl font-semibold">Interactive</h1>
+                <p>Geometry Genius</p>
+            </div>
+            <!-- button -->
+                 <button class="btn text-white px-5 bg-blue-400">Blog</button>
+        </div>
+    </header>
+    <main>
+        <!-- container -->
+        <div class="flex flex-col lg:flex-row m-10">
+            <!-- shape container -->
+            <div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- first card -->
+                <div class="card w-96 bg-base-100 border pt-10">
+                    <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-semibold text-center">Triangle</h2>
+                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-tbase" placeholder="b">
+                        <span class="mx-2">cm</span>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-theight" placeholder="h">
+                        <span class="mx-2">cm</span>
+                      </p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="tarea">0</span> cm<sup>2</sup></p>
+                      <div class="card-actions justify-center py-5">
+                        <button onclick="triangleArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- second card -->
+                <div class="card w-96 bg-base-100 border pt-10">
+                    <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-semibold text-center">Rectangle</h2>
+                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rwidth" placeholder="w">
+                        <span class="mx-2">cm</span>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rheight" placeholder="h">
+                        <span class="mx-2">cm</span>
+                      </p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="rarea">0</span> cm<sup>2</sup></p>
+                      <div class="card-actions justify-center py-5">
+                        <button onclick="rectangleArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- third card -->
+                <div class="card w-96 bg-base-100 border pt-10">
+                    <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-semibold text-center">Parallelogram</h2>
+                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pbase" placeholder="b">
+                        <span class="mx-2">cm</span>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pheight" placeholder="h">
+                        <span class="mx-2">cm</span>
+                      </p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="parea">0</span> cm<sup>2</sup></p>
+                      <div class="card-actions justify-center py-5">
+                        <button onclick="ParallelogramArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- fourth -->
+                <div class="card w-96 bg-base-100 border pt-10">
+                    <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-semibold text-center">Rhombus</h2>
+                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rdiagon1" placeholder="d1">
+                        <span class="mx-2">cm</span>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rdiagon2" placeholder="d2">
+                        <span class="mx-2">cm</span>
+                      </p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="tarea">0</span> cm<sup>2</sup></p>
+                      <div class="card-actions justify-center py-5">
+                        <button onclick="triangleArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- fifth card -->
+                <div class="card w-96 bg-base-100 border pt-10">
+                    <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-semibold text-center">Rectangle</h2>
+                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rwidth" placeholder="w">
+                        <span class="mx-2">cm</span>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-rheight" placeholder="h">
+                        <span class="mx-2">cm</span>
+                      </p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="rarea">0</span> cm<sup>2</sup></p>
+                      <div class="card-actions justify-center py-5">
+                        <button onclick="rectangleArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                      </div>
+                    </div>
+                </div>
+                <!-- sixth card -->
+                <div class="card w-96 bg-base-100 border pt-10">
+                    <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-semibold text-center">Parallelogram</h2>
+                      <p>Area(A) = 0.5 x b x h</p>
+                      <p>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pbase" placeholder="b">
+                        <span class="mx-2">cm</span>
+                        <input type="text" class="border w-24 px-2 bg-gray-100" id="input-pheight" placeholder="h">
+                        <span class="mx-2">cm</span>
+                      </p>
+                      <p class="mt-2 font-semibold text-blue-700">Area: <span id="parea">0</span> cm<sup>2</sup></p>
+                      <div class="card-actions justify-center py-5">
+                        <button onclick="ParallelogramArea()" class="btn px-28 bg-blue-500 text-white">calculator</button>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- area calculator -->
+            <div>
+                <h1 class="text-3xl w-[400px] text-center border">Area calculator</h1>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/utility.js"></script>
+    <script src="js/area-calculatro.js"></script>
+</body>
+</html>
